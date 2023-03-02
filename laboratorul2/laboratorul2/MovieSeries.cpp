@@ -2,13 +2,15 @@
 #include <string.h>
 #include <cstdio>
 #include <algorithm>
+#include<iostream>
+using namespace std;
 
 
 void MovieSeries::init() {
     cnt = 0;
 }
-bool MovieSeries::add(Movie *x) {
-    if (cnt < 16)
+bool MovieSeries::add(Movie* x) {
+    if (cnt > 16)
         return false;
     else {
         film[cnt] = x;
@@ -18,13 +20,13 @@ bool MovieSeries::add(Movie *x) {
 }
 void MovieSeries::print() {
     for (int i = 0; i < cnt; i++) {
-        printf(
-              "%s,%d,%1.f,%d,%d\n",
-              film[i]->get_name(),
-              film[i]->get_year(),
-              film[i]->get_score(),
-              film[i]->get_length(),
-              film[i]->get_passed_years());
+        cout << film[i]->get_name() << endl; 
+        cout << film[i]->get_year() << endl;
+        cout << film[i]->get_score() << endl;
+        cout << film[i]->get_length() << endl;
+        cout << film[i]->get_passed_years() << endl;
+
+
     }
 }
 

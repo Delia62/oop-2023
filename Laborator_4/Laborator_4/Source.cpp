@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
     // printeaza: "Found -1 books" si id-urile
     // -1 daca nu avem nimic
     l1.print_books();
-    //std::cout << "NUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
+    
     int l2_ids[] = { 3356, 2213, 5723, 1246, 12573, 6424, 85573, 2235113, 2241 };
     MyLibrary l2{ std::cout, 9, l2_ids };
     // printeaza: "Found 9 books" si id-urile

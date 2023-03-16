@@ -8,7 +8,7 @@
 
 
 MyLibrary::MyLibrary(const MyLibrary& others) : books(others.books), books_count(others.books_count), output_stream(others.output_stream) {
-    //std::cout << "###############################################################";
+    
 }
 
 MyLibrary::~MyLibrary() {
@@ -77,7 +77,7 @@ MyLibrary::MyLibrary(std::ostream& output_stream, unsigned books_count, ...) : o
     
 
 }
-MyLibrary::MyLibrary(std::initializer_list<int> v) : output_stream(std::cout) /* : MyLibrary(std::cout, v.size(), v.begin(), v.end()) */ {
+MyLibrary::MyLibrary(std::initializer_list<int> v) : output_stream(std::cout)  {
     books = new int[v.size() + 1];
     books_count = 0;
     int i = 0;
@@ -86,14 +86,7 @@ MyLibrary::MyLibrary(std::initializer_list<int> v) : output_stream(std::cout) /*
     books_count++;
     i++;
     }
-    /* if (!std::empty(v)) {
-    int i = 0;
-    books = new int[v.size() + 1];
-    for (const auto& x : v) {
-        books[i] = x;
-        books_count++;
-        i++;
-    }*/
+    
      
 }
 
@@ -121,8 +114,7 @@ void MyLibrary::update_book_id_by_index(unsigned book_index, int book_id) const 
 
     if (book_index <= books_count)
         books[book_index] = book_id;
-   // std::cout << this->books[book_index];
-    //std::cout << "###############################################################";
+   
 }
 unsigned MyLibrary::get_books_count() const {
     return this->books_count;

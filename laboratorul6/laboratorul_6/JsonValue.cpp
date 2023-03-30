@@ -42,7 +42,6 @@ ObjectValue::ObjectValue() {
 }
 ObjectValue::~ObjectValue() {
     delete[] vector;
-
 }
 void ObjectValue::print(std::ostream& out) const {
     out << "{";

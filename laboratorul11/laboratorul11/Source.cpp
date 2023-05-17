@@ -77,7 +77,7 @@ TEST_CASE("check that the size is 2") {
     p.push(9);
     REQUIRE(p.Size() == 2);
 }
- TEST_CASE("check something") {
+TEST_CASE("check something") {
     CircularQueue<std::string> p(4);
     p.push("Buna dimi");
     p.push("Alta data");
@@ -110,7 +110,7 @@ TEST_CASE("add 1000 elements; pop all of them and check that they are correct ")
     for (int i = 0; i < 1000; i++) {
         p.push(i);
     }
-     for (int i = 0; i < 1000; i++) {
+    for (int i = 0; i < 1000; i++) {
         p.pop();
     }
     REQUIRE(p.empty());
@@ -125,4 +125,3 @@ TEST_CASE("add 4 elements; pop all of them ") {
     }
     REQUIRE(p.empty());
 }
-
